@@ -3,6 +3,12 @@ from pickle import FALSE
 import streamlit as st
 import random as rn
 
+# remove hamburger menu
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
 # helpers
 
 MAX_VAL = 20
@@ -19,6 +25,8 @@ def change_number():
     return
 
 # app
+
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 st.title("Multiplication app")
 
